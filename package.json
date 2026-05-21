@@ -1,0 +1,21 @@
+{
+  "name": "cve-prioritiser",
+  "version": "1.0.0",
+  "description": "CVE Exploitation In The Wild Prioritiser - Vulnerability Intelligence Dashboard",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 3000"
+  },
+  "keywords": [
+    "cve",
+    "vulnerability-management",
+    "threat-intelligence",
+    "cisa-kev",
+    "epss"
+  ],
+  "author": "Daniel",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

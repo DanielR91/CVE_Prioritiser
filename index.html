@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CVE "Exploitation In The Wild" Prioritiser</title>
+  <meta name="description" content="Highly operational Vulnerability Intelligence dashboard sorting CVE noise using NVD CVSS, FIRST.org EPSS, and CISA KEV catalogs.">
+  <!-- Google Fonts: Outfit and Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+  
+  <!-- App Shell -->
+  <div class="app-container">
+    
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-logo">
+        <div class="logo-icon">🚨</div>
+        <div class="logo-text">
+          <h1>CVE Prioritiser</h1>
+          <p>Exploitation In The Wild Vulnerability Intelligence</p>
+        </div>
+      </div>
+      <div class="header-meta">
+        <div class="sync-status">
+          <span class="status-indicator-dot pulsing"></span>
+          <span id="last-updated">Syncing data...</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <main class="app-main">
+      
+      <!-- KPI Stats Panel -->
+      <section class="stats-panel">
+        <div class="kpi-card" id="kpi-tracked">
+          <div class="kpi-icon">🔍</div>
+          <div class="kpi-info">
+            <h3 class="kpi-value" id="stat-total-cves">0</h3>
+            <p class="kpi-label">Total CVEs Tracked</p>
+            <p class="kpi-desc">KEV + Recent 7d Feed</p>
+          </div>
+        </div>
+        <div class="kpi-card danger" id="kpi-kev">
+          <div class="kpi-icon">💀</div>
+          <div class="kpi-info">
+            <h3 class="kpi-value" id="stat-kev-cves">0</h3>
+            <p class="kpi-label">Confirmed Exploited</p>
+            <p class="kpi-desc">Listed in CISA KEV</p>
+          </div>
+        </div>
+        <div class="kpi-card warning" id="kpi-immediate">
+          <div class="kpi-icon">⚡</div>
+          <div class="kpi-info">
+            <h3 class="kpi-value" id="stat-immediate-patch">0</h3>
+            <p class="kpi-label">Immediate Patch Required</p>
+            <p class="kpi-desc">Active weaponisation threats</p>
+          </div>
+        </div>
+        <div class="kpi-card info" id="kpi-high-prob">
+          <div class="kpi-icon">📈</div>
+          <div class="kpi-info">
+            <h3 class="kpi-value" id="stat-high-priority">0</h3>
+            <p class="kpi-label">High Probability (>10% EPSS)</p>
+            <p class="kpi-desc">Likely weaponised in 30 days</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Global Attack Surface Heatmap Section -->
+      <section class="heatmap-section">
+        <div class="section-header">
+          <h2>Global Attack Surface Heatmap</h2>
+          <p>Vendors taking the heaviest beating from threat actors (Click block to filter)</p>
+        </div>
+        <div class="heatmap-container" id="heatmap-grid">
+          <!-- Heatmap items will be injected by JS -->
+          <div class="loading-spinner-inline">Loading vendor heatmap data...</div>
+        </div>
+        <div class="heatmap-actions" id="heatmap-filter-indicator" style="display: none;">
+          <span class="active-filter-badge">
+            Filtered by Vendor: <strong id="filtered-vendor-name">None</strong>
+            <button id="clear-vendor-filter" title="Clear filter">×</button>
+          </span>
+        </div>
+      </section>
+
+      <!-- Vulnerability Triage Grid -->
+      <section class="matrix-section">
+        
+        <!-- Tab Navigation (The Triage Quadrants) -->
+        <div class="matrix-tabs-container">
+          <nav class="matrix-tabs" role="tablist">
+            <button class="matrix-tab active" data-category="all" role="tab" aria-selected="true" id="tab-all">
+              <span class="tab-title">All Threats</span>
+              <span class="tab-badge" id="count-all">0</span>
+            </button>
+            <button class="matrix-tab urgent" data-category="immediate" role="tab" aria-selected="false" id="tab-immediate">
+              <span class="tab-icon">🚨</span>
+              <span class="tab-title">Immediate Patch</span>
+              <span class="tab-badge" id="count-immediate">0</span>
+            </button>
+            <button class="matrix-tab high" data-category="high" role="tab" aria-selected="false" id="tab-high">
+              <span class="tab-icon">⚡</span>
+              <span class="tab-title">High Priority</span>
+              <span class="tab-badge" id="count-high">0</span>
+            </button>
+            <button class="matrix-tab scheduled" data-category="scheduled" role="tab" aria-selected="false" id="tab-scheduled">
+              <span class="tab-icon">⏳</span>
+              <span class="tab-title">Scheduled Patch</span>
+              <span class="tab-badge" id="count-scheduled">0</span>
+            </button>
+            <button class="matrix-tab watchlist" data-category="watchlist" role="tab" aria-selected="false" id="tab-watchlist">
+              <span class="tab-icon">💤</span>
+              <span class="tab-title">Watchlist</span>
+              <span class="tab-badge" id="count-watchlist">0</span>
+            </button>
+          </nav>
+        </div>
+
+        <!-- Filters & Search Controls -->
+        <div class="controls-panel">
+          <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search CVE ID, vendor, product, ransomware, description..." autocomplete="off">
+            <span class="search-icon">🔍</span>
+          </div>
+          
+          <div class="filters-group">
+            <div class="filter-item">
+              <label for="cvss-slider">Min CVSS: <span id="cvss-val">0.0</span></label>
+              <input type="range" id="cvss-slider" min="0" max="10" step="0.5" value="0">
+            </div>
+            <div class="filter-item">
+              <label for="epss-slider">Min EPSS: <span id="epss-val">0</span>%</label>
+              <input type="range" id="epss-slider" min="0" max="100" step="5" value="0">
+            </div>
+            <div class="filter-item">
+              <label for="sort-select">Sort By</label>
+              <select id="sort-select">
+                <option value="cvss-desc">CVSS Severity (High-Low)</option>
+                <option value="epss-desc">EPSS Probability (High-Low)</option>
+                <option value="date-desc">Date Added (Newest)</option>
+                <option value="cve-asc">CVE ID (A-Z)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- CVE Main Cards Grid -->
+        <div class="cve-grid-wrapper">
+          <div class="cve-grid" id="cve-cards-container">
+            <!-- CVE Cards will be injected by JS -->
+            <div class="loading-state">
+              <div class="spinner"></div>
+              <p>Analyzing vulnerability streams & telemetry...</p>
+            </div>
+          </div>
+          
+          <!-- Empty State -->
+          <div class="empty-state" id="empty-state" style="display: none;">
+            <div class="empty-icon">🛡️</div>
+            <h3>No vulnerabilities match the current filters</h3>
+            <p>Try resetting the search terms, sliders, or vendor filters.</p>
+            <button id="reset-filters-btn">Reset All Filters</button>
+          </div>
+          
+          <!-- Pagination / Load More -->
+          <div class="pagination-panel" id="pagination-container" style="display: none;">
+            <p class="results-info">Showing <span id="count-shown">0</span> of <span id="count-total">0</span> vulnerabilities</p>
+            <button id="load-more-btn" class="btn-primary">Load More Vulnerabilities</button>
+          </div>
+        </div>
+
+      </section>
+      
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>&copy; 2026 CVE "Exploitation In The Wild" Prioritiser. Serverless intelligence dashboard powered by NVD, FIRST EPSS, and CISA KEV.</p>
+    </footer>
+
+    <!-- Remediation Side Drawer Component -->
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <aside class="remediation-drawer" id="remediation-drawer" aria-hidden="true" role="dialog">
+      <div class="drawer-header">
+        <div class="drawer-header-title">
+          <span id="drawer-cve-id" class="drawer-cve-badge">CVE-2023-XXXX</span>
+          <h2 id="drawer-title">Vulnerability Details</h2>
+        </div>
+        <button class="close-drawer-btn" id="close-drawer" aria-label="Close details">&times;</button>
+      </div>
+      
+      <div class="drawer-content">
+        <!-- Threat Status Ring & Scores -->
+        <div class="drawer-scores-panel">
+          <div class="score-badge cvss-score-section">
+            <div class="score-value" id="drawer-cvss-score">N/A</div>
+            <div class="score-details">
+              <span class="score-title">CVSS Score</span>
+              <span class="score-version" id="drawer-cvss-version">V3.1</span>
+            </div>
+          </div>
+          <div class="score-badge epss-score-section">
+            <div class="score-value" id="drawer-epss-score">0.0%</div>
+            <div class="score-details">
+              <span class="score-title">EPSS Exploit Prob.</span>
+              <span class="score-version" id="drawer-epss-percentile">99th percentile</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ransomware Banner (Injected dynamically) -->
+        <div class="ransomware-alert" id="drawer-ransomware-alert" style="display: none;">
+          <div class="alert-icon">⚠️</div>
+          <div class="alert-content">
+            <h4>Ransomware Campaign Threat</h4>
+            <p>This vulnerability is actively weaponized and associated with known ransomware group activities.</p>
+          </div>
+        </div>
+
+        <!-- Basic Metadata -->
+        <div class="meta-info-grid">
+          <div class="meta-item">
+            <span class="meta-label">Vendor / Project</span>
+            <strong id="drawer-vendor">Microsoft</strong>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Affected Product</span>
+            <strong id="drawer-product">Windows Server</strong>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Date Tracked</span>
+            <strong id="drawer-date-added">2026-05-20</strong>
+          </div>
+          <div class="meta-item" id="drawer-due-date-container">
+            <span class="meta-label">CISA Due Date</span>
+            <strong id="drawer-due-date">2026-06-03</strong>
+          </div>
+        </div>
+
+        <!-- Tactical Recommendation Box -->
+        <div class="action-callout" id="drawer-action-callout">
+          <div class="callout-indicator"></div>
+          <div class="callout-content">
+            <h4>Tactical Action Required</h4>
+            <p id="drawer-tactical-action">Emergency patch cycle. Active threat to infrastructure.</p>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="drawer-section">
+          <h3>Vulnerability Summary</h3>
+          <p id="drawer-description" class="cve-description-text">Loading...</p>
+        </div>
+
+        <!-- Remediation Plan -->
+        <div class="drawer-section" id="drawer-remediation-section">
+          <h3>Required Remediation</h3>
+          <div class="remediation-box">
+            <p id="drawer-required-action">Apply vendor patch immediately.</p>
+            <button class="btn-copy-code" id="btn-copy-remediation" title="Copy action to clipboard">Copy Action</button>
+          </div>
+        </div>
+
+        <!-- Reference Links -->
+        <div class="drawer-section">
+          <h3>Vendor Bulletins & Advisories</h3>
+          <ul class="references-list" id="drawer-references">
+            <!-- References will be injected dynamically -->
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- App Main Logic -->
+  <script src="src/js/app.js"></script>
+</body>
+</html>

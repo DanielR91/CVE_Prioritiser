@@ -1,0 +1,41 @@
+name: Daily CVE Data Update
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Runs daily at 06:00 UTC
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+permissions:
+  contents: write # Allows writing updates back to the repo
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-level: '3.10'
+          cache: 'pip' # Optional, but good practice
+
+      - name: Run Data Update Script
+        run: python3 scripts/update_data.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Add only our modified data files
+          git add src/data/cve-data.json src/data/cvss-cache.json
+          
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes in CVE data files to commit."
+          else
+            git commit -m "Auto-update CVE Prioritiser database [skip ci]"
+            git push
+          fi
