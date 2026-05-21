@@ -1,5 +1,7 @@
 # CVE "Exploitation In The Wild" Prioritiser
 
+**[🚀 Launch Live Dashboard](https://danielr91.github.io/CVE_Prioritiser/)**
+
 The CVE "Exploitation In The Wild" Prioritiser is a highly operational, serverless Vulnerability Intelligence console. It is designed to solve the biggest bottleneck in vulnerability management: **noise**.
 
 In enterprise security, teams receive a daily feed of dozens of new vulnerabilities, almost all flagged as "High" or "Critical" based on their static CVSS score. This dashboard filters out the noise, cross-referencing theoretical severity ratings with real-world threat telemetry to pinpoint only the vulnerabilities that threat actors are actively weaponising in the wild.
