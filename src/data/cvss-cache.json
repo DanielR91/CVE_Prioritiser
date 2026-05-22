@@ -6390,5 +6390,17 @@
   "CVE-2023-28771": {
     "cvss": 9.8,
     "cvss_version": "VV3_1"
+  },
+  "CVE-2025-34291": {
+    "cvss": 8.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-34926": {
+    "cvss": 6.7,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2024-20767": {
+    "cvss": 7.4,
+    "cvss_version": "VV3_1"
   }
 }
