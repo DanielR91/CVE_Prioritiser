@@ -6402,5 +6402,9 @@
   "CVE-2024-20767": {
     "cvss": 7.4,
     "cvss_version": "VV3_1"
+  },
+  "CVE-2026-9082": {
+    "cvss": 6.5,
+    "cvss_version": "V3.1"
   }
 }
