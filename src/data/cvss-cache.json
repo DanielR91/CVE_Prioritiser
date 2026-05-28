@@ -6410,5 +6410,17 @@
   "CVE-2026-48172": {
     "cvss": 9.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-48027": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-45321": {
+    "cvss": 9.6,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-8398": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   }
 }
