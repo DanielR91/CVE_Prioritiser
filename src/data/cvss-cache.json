@@ -6426,5 +6426,9 @@
   "CVE-2026-0257": {
     "cvss": 9.1,
     "cvss_version": "V3.1"
+  },
+  "CVE-2024-21182": {
+    "cvss": 7.5,
+    "cvss_version": "V3.1"
   }
 }
