@@ -6430,5 +6430,13 @@
   "CVE-2024-21182": {
     "cvss": 7.5,
     "cvss_version": "V3.1"
+  },
+  "CVE-2022-0492": {
+    "cvss": 7.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2025-48595": {
+    "cvss": 8.4,
+    "cvss_version": "V3.1"
   }
 }
