@@ -6446,5 +6446,13 @@
   "CVE-2026-28318": {
     "cvss": 7.5,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-42271": {
+    "cvss": 8.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-50751": {
+    "cvss": 9.3,
+    "cvss_version": "V3.1"
   }
 }
