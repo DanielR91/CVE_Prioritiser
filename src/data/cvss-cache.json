@@ -6454,5 +6454,17 @@
   "CVE-2026-50751": {
     "cvss": 9.3,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-11645": {
+    "cvss": 8.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-7473": {
+    "cvss": 5.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-20245": {
+    "cvss": 7.8,
+    "cvss_version": "V3.1"
   }
 }
