@@ -6474,5 +6474,13 @@
   "CVE-2026-35273": {
     "cvss": 9.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-54420": {
+    "cvss": 8.5,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-20262": {
+    "cvss": 6.5,
+    "cvss_version": "V3.1"
   }
 }
