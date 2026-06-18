@@ -6484,7 +6484,7 @@
     "cvss_version": "V3.1"
   },
   "CVE-2026-48907": {
-    "cvss": 10.0,
-    "cvss_version": "VV4_0"
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   }
 }
