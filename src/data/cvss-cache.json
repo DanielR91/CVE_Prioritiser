@@ -6490,5 +6490,21 @@
   "CVE-2026-20253": {
     "cvss": 9.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2025-67038": {
+    "cvss": 9.8,
+    "cvss_version": "VV3_1"
+  },
+  "CVE-2026-34910": {
+    "cvss": 10.0,
+    "cvss_version": "VV3_1"
+  },
+  "CVE-2026-34909": {
+    "cvss": 10.0,
+    "cvss_version": "VV3_1"
+  },
+  "CVE-2026-34908": {
+    "cvss": 10.0,
+    "cvss_version": "VV3_1"
   }
 }
