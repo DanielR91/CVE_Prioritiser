@@ -6508,8 +6508,8 @@
     "cvss_version": "V3.1"
   },
   "CVE-2026-12569": {
-    "cvss": 9.3,
-    "cvss_version": "V4.0"
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   },
   "CVE-2026-20230": {
     "cvss": 8.6,
