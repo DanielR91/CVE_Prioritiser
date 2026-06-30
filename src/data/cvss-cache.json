@@ -6514,5 +6514,9 @@
   "CVE-2026-20230": {
     "cvss": 8.6,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-48558": {
+    "cvss": 9.5,
+    "cvss_version": "VV4_0"
   }
 }
