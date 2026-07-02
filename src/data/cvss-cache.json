@@ -6516,7 +6516,11 @@
     "cvss_version": "V3.1"
   },
   "CVE-2026-48558": {
-    "cvss": 9.5,
-    "cvss_version": "VV4_0"
+    "cvss": 10.0,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-45659": {
+    "cvss": 8.8,
+    "cvss_version": "V3.1"
   }
 }
