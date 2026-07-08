@@ -6522,5 +6522,21 @@
   "CVE-2026-45659": {
     "cvss": 8.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-48908": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-55255": {
+    "cvss": 8.4,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-56290": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-48282": {
+    "cvss": 10.0,
+    "cvss_version": "V3.1"
   }
 }
