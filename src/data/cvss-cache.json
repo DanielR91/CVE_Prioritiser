@@ -6566,5 +6566,13 @@
   "CVE-2026-15410": {
     "cvss": 7.2,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-46817": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2023-4346": {
+    "cvss": 7.5,
+    "cvss_version": "V3.1"
   }
 }
