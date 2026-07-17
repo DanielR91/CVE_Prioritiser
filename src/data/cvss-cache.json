@@ -6574,5 +6574,17 @@
   "CVE-2023-4346": {
     "cvss": 7.5,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-58644": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-25089": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-39808": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   }
 }
