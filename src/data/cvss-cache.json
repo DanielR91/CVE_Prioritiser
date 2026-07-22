@@ -6586,5 +6586,21 @@
   "CVE-2026-39808": {
     "cvss": 9.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-60137": {
+    "cvss": 5.9,
+    "cvss_version": "VV3_1"
+  },
+  "CVE-2026-63030": {
+    "cvss": 9.8,
+    "cvss_version": "VV3_1"
+  },
+  "CVE-2026-0770": {
+    "cvss": 9.8,
+    "cvss_version": "V3.0"
+  },
+  "CVE-2021-27137": {
+    "cvss": 8.1,
+    "cvss_version": "V3.1"
   }
 }
