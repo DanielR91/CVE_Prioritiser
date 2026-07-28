@@ -6610,5 +6610,13 @@
   "CVE-2026-50522": {
     "cvss": 9.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2025-68686": {
+    "cvss": 5.9,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-16812": {
+    "cvss": 10.0,
+    "cvss_version": "V3.1"
   }
 }
