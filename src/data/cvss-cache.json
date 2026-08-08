@@ -6642,5 +6642,9 @@
   "CVE-2026-63077": {
     "cvss": 9.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-8037": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   }
 }
