@@ -6662,5 +6662,21 @@
   "CVE-2025-62593": {
     "cvss": 8.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-33824": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-59310": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-55040": {
+    "cvss": 9.1,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-65400": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   }
 }
