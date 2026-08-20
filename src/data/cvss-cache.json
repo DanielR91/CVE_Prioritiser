@@ -5992,7 +5992,7 @@
     "cvss_version": "V2.0"
   },
   "CVE-2020-1054": {
-    "cvss": 7.8,
+    "cvss": 7.0,
     "cvss_version": "V3.1"
   },
   "CVE-2021-1675": {
@@ -6677,6 +6677,10 @@
   },
   "CVE-2026-65400": {
     "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-64849": {
+    "cvss": 9.3,
     "cvss_version": "V3.1"
   }
 }
