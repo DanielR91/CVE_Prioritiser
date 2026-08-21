@@ -6682,5 +6682,13 @@
   "CVE-2026-64849": {
     "cvss": 9.3,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-72530": {
+    "cvss": 9.0,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-72529": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   }
 }
