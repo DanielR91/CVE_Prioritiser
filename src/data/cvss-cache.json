@@ -6698,5 +6698,33 @@
   "CVE-2026-21962": {
     "cvss": 10.0,
     "cvss_version": "V3.1"
+  },
+  "CVE-2021-23758": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2015-3246": {
+    "cvss": 5.1,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2015-5287": {
+    "cvss": 7.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2022-0995": {
+    "cvss": 7.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-8452": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2019-1068": {
+    "cvss": 8.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-60004": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   }
 }
