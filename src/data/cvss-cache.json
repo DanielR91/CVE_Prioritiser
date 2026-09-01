@@ -6738,5 +6738,13 @@
   "CVE-2026-66384": {
     "cvss": 5.3,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-82078": {
+    "cvss": 9.1,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-81578": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   }
 }
