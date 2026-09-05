@@ -6492,8 +6492,8 @@
     "cvss_version": "V3.1"
   },
   "CVE-2025-67038": {
-    "cvss": 9.8,
-    "cvss_version": "V3.1"
+    "cvss": 9.3,
+    "cvss_version": "V4.0"
   },
   "CVE-2026-34910": {
     "cvss": 10.0,
@@ -6773,6 +6773,10 @@
   },
   "CVE-2026-83549": {
     "cvss": 7.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-85046": {
+    "cvss": 8.8,
     "cvss_version": "V3.1"
   }
 }
