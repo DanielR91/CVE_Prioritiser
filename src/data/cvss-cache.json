@@ -744,7 +744,7 @@
     "cvss_version": "V3.1"
   },
   "CVE-2025-38352": {
-    "cvss": 7.4,
+    "cvss": 7.8,
     "cvss_version": "V3.1"
   },
   "CVE-2025-48543": {
@@ -6492,8 +6492,8 @@
     "cvss_version": "V3.1"
   },
   "CVE-2025-67038": {
-    "cvss": 9.3,
-    "cvss_version": "V4.0"
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   },
   "CVE-2026-34910": {
     "cvss": 10.0,
@@ -6777,6 +6777,22 @@
   },
   "CVE-2026-85046": {
     "cvss": 8.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-75650": {
+    "cvss": 10.0,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-81963": {
+    "cvss": 7.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-86218": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-85880": {
+    "cvss": 7.8,
     "cvss_version": "V3.1"
   }
 }
