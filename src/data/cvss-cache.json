@@ -6794,5 +6794,21 @@
   "CVE-2026-85880": {
     "cvss": 7.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-19490": {
+    "cvss": 9.3,
+    "cvss_version": "V4.0"
+  },
+  "CVE-2025-25249": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-87491": {
+    "cvss": 8.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-20079": {
+    "cvss": 10.0,
+    "cvss_version": "V3.1"
   }
 }
