@@ -6812,11 +6812,23 @@
     "cvss_version": "V3.1"
   },
   "CVE-2026-86060": {
-    "cvss": 9.2,
-    "cvss_version": "V4.0"
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   },
   "CVE-2026-67277": {
+    "cvss": 8.2,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-84869": {
+    "cvss": 9.9,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-42016": {
     "cvss": 8.8,
-    "cvss_version": "V4.0"
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-42018": {
+    "cvss": 7.5,
+    "cvss_version": "V3.1"
   }
 }
