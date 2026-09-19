@@ -6850,5 +6850,17 @@
   "CVE-2026-87886": {
     "cvss": 7.8,
     "cvss_version": "V3.0"
+  },
+  "CVE-2025-39964": {
+    "cvss": 5.5,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-53266": {
+    "cvss": 8.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2025-39682": {
+    "cvss": 7.1,
+    "cvss_version": "V3.1"
   }
 }
