@@ -6860,7 +6860,7 @@
     "cvss_version": "V3.1"
   },
   "CVE-2025-39682": {
-    "cvss": 7.1,
+    "cvss": 9.8,
     "cvss_version": "V3.1"
   }
 }
