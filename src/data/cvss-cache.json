@@ -6866,5 +6866,21 @@
   "CVE-2026-7273": {
     "cvss": 8.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-93952": {
+    "cvss": 10.0,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-94127": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-93616": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-85102": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   }
 }
