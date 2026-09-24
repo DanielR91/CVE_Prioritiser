@@ -6548,7 +6548,7 @@
     "cvss_version": "V3.1"
   },
   "CVE-2008-4128": {
-    "cvss": 4.3,
+    "cvss": 8.1,
     "cvss_version": "V3.1"
   },
   "CVE-2026-56155": {
