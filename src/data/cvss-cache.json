@@ -6882,5 +6882,13 @@
   "CVE-2026-85102": {
     "cvss": 9.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-5430": {
+    "cvss": 10.0,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-71362": {
+    "cvss": 9.1,
+    "cvss_version": "V3.1"
   }
 }
