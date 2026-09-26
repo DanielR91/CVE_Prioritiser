@@ -6890,5 +6890,17 @@
   "CVE-2026-71362": {
     "cvss": 9.1,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-67279": {
+    "cvss": 6.5,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-65660": {
+    "cvss": 8.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-87902": {
+    "cvss": 8.1,
+    "cvss_version": "V3.1"
   }
 }
