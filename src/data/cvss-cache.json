@@ -3548,7 +3548,7 @@
     "cvss_version": "V3.1"
   },
   "CVE-2013-0431": {
-    "cvss": 5.3,
+    "cvss": 3.7,
     "cvss_version": "V3.1"
   },
   "CVE-2013-0422": {
@@ -6704,7 +6704,7 @@
     "cvss_version": "V3.1"
   },
   "CVE-2015-3246": {
-    "cvss": 5.1,
+    "cvss": 7.4,
     "cvss_version": "V3.1"
   },
   "CVE-2015-5287": {
@@ -6916,6 +6916,10 @@
     "cvss_version": "V3.1"
   },
   "CVE-2026-76504": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-104286": {
     "cvss": 9.8,
     "cvss_version": "V3.1"
   }
