@@ -6954,5 +6954,13 @@
   "CVE-2015-3306": {
     "cvss": 10.0,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-104935": {
+    "cvss": 8.6,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-96951": {
+    "cvss": 8.8,
+    "cvss_version": "V3.1"
   }
 }
