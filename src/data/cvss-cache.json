@@ -6962,5 +6962,21 @@
   "CVE-2026-96951": {
     "cvss": 8.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-105134": {
+    "cvss": 10.0,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-76519": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-105133": {
+    "cvss": 7.3,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-0322": {
+    "cvss": 8.6,
+    "cvss_version": "V4.0"
   }
 }
