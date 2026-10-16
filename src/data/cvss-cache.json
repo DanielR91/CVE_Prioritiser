@@ -6976,7 +6976,11 @@
     "cvss_version": "V3.1"
   },
   "CVE-2026-0322": {
-    "cvss": 8.6,
-    "cvss_version": "V4.0"
+    "cvss": 7.2,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-21589": {
+    "cvss": 7.5,
+    "cvss_version": "V3.1"
   }
 }
