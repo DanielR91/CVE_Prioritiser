@@ -6982,5 +6982,13 @@
   "CVE-2026-21589": {
     "cvss": 7.5,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-102764": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2025-61624": {
+    "cvss": 6.5,
+    "cvss_version": "V3.1"
   }
 }
