@@ -7020,7 +7020,15 @@
     "cvss_version": "V3.1"
   },
   "CVE-2026-110447": {
-    "cvss": 9.2,
-    "cvss_version": "V4.0"
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-109618": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-109619": {
+    "cvss": 8.1,
+    "cvss_version": "V3.1"
   }
 }
