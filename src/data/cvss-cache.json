@@ -7046,5 +7046,13 @@
   "CVE-2026-46300": {
     "cvss": 7.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-97229": {
+    "cvss": 10.0,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-76418": {
+    "cvss": 8.6,
+    "cvss_version": "V3.1"
   }
 }
