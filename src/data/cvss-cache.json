@@ -7058,5 +7058,13 @@
   "CVE-2026-111357": {
     "cvss": 7.0,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-119977": {
+    "cvss": 8.1,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-118527": {
+    "cvss": 4.3,
+    "cvss_version": "V3.1"
   }
 }
