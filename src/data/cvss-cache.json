@@ -7074,5 +7074,21 @@
   "CVE-2026-19868": {
     "cvss": 7.5,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-102895": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-123158": {
+    "cvss": 8.1,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-116779": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-123218": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   }
 }
