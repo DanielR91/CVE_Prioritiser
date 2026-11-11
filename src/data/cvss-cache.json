@@ -7090,5 +7090,29 @@
   "CVE-2026-123218": {
     "cvss": 9.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-124194": {
+    "cvss": 6.5,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-111793": {
+    "cvss": 4.3,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-20320": {
+    "cvss": 7.5,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-111560": {
+    "cvss": 8.6,
+    "cvss_version": "V4.0"
+  },
+  "CVE-2026-116606": {
+    "cvss": 9.3,
+    "cvss_version": "V4.0"
+  },
+  "CVE-2026-125350": {
+    "cvss": 8.8,
+    "cvss_version": "V3.1"
   }
 }
