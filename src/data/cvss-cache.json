@@ -7104,12 +7104,12 @@
     "cvss_version": "V3.1"
   },
   "CVE-2026-111560": {
-    "cvss": 8.6,
-    "cvss_version": "V4.0"
+    "cvss": 7.2,
+    "cvss_version": "V3.1"
   },
   "CVE-2026-116606": {
-    "cvss": 9.3,
-    "cvss_version": "V4.0"
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   },
   "CVE-2026-125350": {
     "cvss": 8.8,
