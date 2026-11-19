@@ -7126,5 +7126,21 @@
   "CVE-2026-115731": {
     "cvss": 9.9,
     "cvss_version": "V3.1"
+  },
+  "CVE-2024-10441": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-40217": {
+    "cvss": 8.8,
+    "cvss_version": "VV3_1"
+  },
+  "CVE-2026-90817": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-90436": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
   }
 }
