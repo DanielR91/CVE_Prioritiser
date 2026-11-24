@@ -7158,5 +7158,13 @@
   "CVE-2026-76466": {
     "cvss": 9.8,
     "cvss_version": "V3.1"
+  },
+  "CVE-2026-133968": {
+    "cvss": 9.8,
+    "cvss_version": "V3.1"
+  },
+  "CVE-2026-134624": {
+    "cvss": 8.7,
+    "cvss_version": "V3.1"
   }
 }
